@@ -30,7 +30,7 @@ export default function SearchableLayout({
   };
   return (
     <div>
-      <div>
+      <div className={style.seacrchbar_container}>
         <input
           value={search}
           onKeyDown={onKeyDown}
