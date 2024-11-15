@@ -44,7 +44,7 @@ export default function Home({
           ))}
         </section>
         <section>
-          <h3>등록된 모든 도서123e</h3>
+          <h3>등록된 모든 도서</h3>
           {allbooks.map((book) => (
             <BookItem key={book.id} {...book} />
           ))}
