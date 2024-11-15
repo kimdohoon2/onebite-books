@@ -1,3 +1,21 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    // img 태그 허용 (경고를 무시하고자 할 때)
+    "@next/next/no-img-element": "off",
+
+    // 미사용 변수가 있을 때 오류 대신 경고로 표시
+    "@typescript-eslint/no-unused-vars": "warn",
+
+    // JSX 내에서 img에 alt가 필요하지 않도록 설정
+    "jsx-a11y/alt-text": [
+      "warn",
+      {
+        "img": ["Image"] // Image 태그에는 alt가 필요, img 태그에는 alt 체크 제외
+      }
+    ],
+
+    // 기타 사용되지 않는 표현식에 대한 경고 해제
+    "@typescript-eslint/no-unused-expressions": "off"
+  }
 }
